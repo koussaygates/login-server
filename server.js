@@ -30,6 +30,7 @@ app.get('/api/logs', authMiddleware, (req, res) => {
     res.json(rows);
   });
 });
+app.get('/', (req, res) => res.json({ status: 'running' }));
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
